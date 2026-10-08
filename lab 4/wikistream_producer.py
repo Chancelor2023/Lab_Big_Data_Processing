@@ -24,6 +24,8 @@ producer = Producer(conf)
 stream = EventStreams(
   streams=['recentchange', 'revision-create'], since='20260209'
 )
+
+# Change the language
 stream.register_filter(server_name='en.wikipedia.org', type='edit')
 
 # %% Query EventStream
